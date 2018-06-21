@@ -1,0 +1,32 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
+</head>
+<form novalidate
+  class="container"
+  [formGroup] = "studentForm"
+  (ngSubmit)="onSubmit(studentForm.value)">
+
+  <div class="form-group">
+    <label>First Name</label>
+    <input name="firstName" type="text" placeholder="First Name" formControlName="firstName" class="form-control">
+  </div>
+  <div>
+    <label>Second Name</label>
+    <input name="secondName" type="text" placeholder="Second Name" formControlName="secondName" class="form-control">
+  </div>
+  <br>
+  <div>
+    <label>Class</label>
+    <input name="class" type="text" placeholder="Class" formControlName="class" class="form-control">
+  </div>
+  <div>
+    <label>Section</label>
+    <input name="section" type="string" placeholder="Section" formControlName="section" class="form-control">
+  </div>
+  <br>
+  <button name="submit" type="submit" value="Submit" class="form-control">Submit</button>
+  <br><br>
+  <pre>{{studentForm.value | json}}</pre>
+</form>
+
+<div #errorLog> {{errorMsg}} </div>
