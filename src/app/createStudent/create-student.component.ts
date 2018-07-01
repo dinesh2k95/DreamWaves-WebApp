@@ -25,19 +25,19 @@ export class CreateStudentComponent {
       }
 
   onSubmit(formValues) {
-    let formJson = JSON.stringify(formValues);
-    console.log(formJson);
-    let header = new Headers({
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
-  })
-  let requestOptions: RequestOptionsArgs = ({headers: header})
-    this.http.post(this.studentPostUrl, formJson, requestOptions)
-      .toPromise()
-      .then(response => {this.errorMsg = response.text()
-      console.log(response.text())})
-      .catch(error => this.errorMsg = error.message)
-      console.log(requestOptions);
+  //   let formJson = JSON.stringify(formValues);
+  //   console.log(formJson);
+  //   let header = new Headers({
+  //     'Content-Type': 'application/json',
+  //     'Accept': 'application/json'
+  // })
+  // let requestOptions: RequestOptionsArgs = ({headers: header})
+  //   this.http.post(this.studentPostUrl, formJson, requestOptions)
+  //     .toPromise()
+  //     .then(response => {this.errorMsg = response.text()
+  //     console.log(response.text())})
+  //     .catch(error => this.errorMsg = error.message)
+  //     console.log(requestOptions);
   }
 
 }
